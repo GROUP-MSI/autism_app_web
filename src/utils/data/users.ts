@@ -1,0 +1,58 @@
+import type { User } from "../../store/slices/usersSlice";
+
+export const initialUsersData: User[] = [
+  {
+    id: "1",
+    name: "Dr. María González",
+    email: "maria.gonzalez@clinic.com",
+    role: "Terapeuta Principal",
+    status: "active",
+    createdAt: "2024-01-15",
+    avatar: "/placeholder.svg?height=40&width=40",
+  },
+  {
+    id: "2",
+    name: "Dr. Carlos Rodríguez",
+    email: "carlos.rodriguez@clinic.com",
+    role: "Psicólogo Infantil",
+    status: "active",
+    createdAt: "2024-01-20",
+    avatar: "/placeholder.svg?height=40&width=40",
+  },
+  {
+    id: "3",
+    name: "Ana Martínez",
+    email: "ana.martinez@clinic.com",
+    role: "Especialista en IA",
+    status: "active",
+    createdAt: "2024-02-01",
+    avatar: "/placeholder.svg?height=40&width=40",
+  },
+  {
+    id: "4",
+    name: "Luis Fernández",
+    email: "luis.fernandez@clinic.com",
+    role: "Coordinador de Tratamiento",
+    status: "inactive",
+    createdAt: "2024-02-10",
+    avatar: "/placeholder.svg?height=40&width=40",
+  },
+  {
+    id: "5",
+    name: "Dra. Carmen López",
+    email: "carmen.lopez@clinic.com",
+    role: "Neuróloga Pediátrica",
+    status: "active",
+    createdAt: "2024-02-15",
+    avatar: "/placeholder.svg?height=40&width=40",
+  },
+  {
+    id: "6",
+    name: "Roberto Silva",
+    email: "roberto.silva@clinic.com",
+    role: "Administrador del Sistema",
+    status: "active",
+    createdAt: "2024-03-01",
+    avatar: "/placeholder.svg?height=40&width=40",
+  },
+]
