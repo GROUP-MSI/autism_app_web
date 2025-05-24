@@ -30,8 +30,9 @@ export const DiagnosticView = () =>
       try {
         const stream = await navigator.mediaDevices.getUserMedia({ video: true })
         if (videoRef.current) {
-          videoRef.current.srcObject = stream
-          setCameraActive(true)
+          videoRef.current.srcObject = stream;
+          await videoRef.current.play();
+          setCameraActive(true);
         }
       } catch (err) {
         console.error("Error accessing camera:", err)
@@ -79,7 +80,11 @@ export const DiagnosticView = () =>
           <div className="mb-6">
             <div className="relative bg-black rounded-lg overflow-hidden h-[400px] flex items-center justify-center">
               {cameraActive ? (
-                <video ref={videoRef} autoPlay playsInline className="w-full h-full object-cover" />
+                <video ref={videoRef} 
+                      autoPlay 
+                      playsInline 
+                      controls 
+                      className="w-full h-full object-cover" />
               ) : (
                 <div className="text-white flex flex-col items-center">
                   <Camera className="h-16 w-16 mb-4" />

@@ -1,5 +1,6 @@
 import { Brain, LogIn } from "lucide-react";
 import type { ReactNode } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface HomeLayoutProp
 {
@@ -8,6 +9,8 @@ interface HomeLayoutProp
 
 export const HomeLayout = ({children} : HomeLayoutProp) => 
 {
+
+  const navigate = useNavigate();
 
  return (
   // <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_ID}>   
@@ -20,7 +23,8 @@ export const HomeLayout = ({children} : HomeLayoutProp) =>
             <Brain className="h-8 w-8" />
             <h1 className="text-2xl font-bold">AutismoCare Bolivia</h1>
           </div>
-          <button className="px-4 py-2 bg-white text-blue-700 rounded-md hover:bg-blue-100 flex items-center">
+          <button className="px-4 py-2 bg-white text-blue-700 rounded-md hover:bg-blue-100 flex items-center"
+            onClick={() => {navigate("/home/login")}}>
             <LogIn className="mr-2 h-4 w-4" /> Iniciar Sesión
           </button>
         </div>
