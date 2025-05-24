@@ -2,6 +2,7 @@
 
 import type { ReactNode } from "react"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 interface MenuOption {
   id: string
@@ -20,6 +21,7 @@ export const LayoutAdmin = ({ children, menuOptions }: HomeLayoutProp) => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [expandedMenus, setExpandedMenus] = useState<string[]>([])
   const [activeOption, setActiveOption] = useState<string>("")
+  const navigate = useNavigate();
 
   const toggleSubmenu = (optionId: string) => {
     setExpandedMenus((prev) => (prev.includes(optionId) ? prev.filter((id) => id !== optionId) : [...prev, optionId]))
@@ -79,8 +81,9 @@ export const LayoutAdmin = ({ children, menuOptions }: HomeLayoutProp) => {
                       <button
                         key={subOption.id}
                         onClick={() => {
-                          setActiveOption(subOption.id)
-                          setSidebarOpen(false)
+                          setActiveOption(subOption.id);
+                          setSidebarOpen(false);
+                          navigate(subOption.href ?? "settings/user");
                         }}
                         className={`w-full flex items-center px-4 py-2 text-sm rounded-md transition-colors duration-200 ${
                           activeOption === subOption.id
