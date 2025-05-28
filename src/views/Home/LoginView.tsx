@@ -110,7 +110,11 @@ export const LoginView = () => {
       const bugs = [
         {
           title: "Error de manipulacion",
-          description: "Error al crear",
+          description: "Error al crear Token",
+        },
+        {
+          title: "Error de manipulacion",
+          description: "Error al crear token en el localStorage ",
         },
       ];
 
