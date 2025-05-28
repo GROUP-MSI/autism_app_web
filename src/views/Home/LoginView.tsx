@@ -1,6 +1,97 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+// import { render, screen, fireEvent } from "@testing-library/react";
+// import { MemoryRouter, Route, Routes } from "react-router-dom";
+import axios from "axios";
+
+// Mock de react-toastify
+// jest.mock("react-toastify", () => ({
+//   toast: {
+//     success: jest.fn(),
+//     error: jest.fn(),
+//   },
+// }));
+
+// describe("API Test - POST /api/Test/testing", () => {
+//   test("should return success with valid bug data", async () => {
+//     const bugs = [
+//       {
+//         title: "Error de manipulacion",
+//         description: "Error al crear",
+//       },
+//     ];
+
+//     const response = await axios.post(
+//       "http://https://1ecd-131-0-199-152.ngrok-free.app:5065/api/Test/testing",
+//       bugs
+//     );
+
+//     expect(response.status).toBe(200);
+//     expect(response.data).toBeDefined();
+//   });
+// });
+
+// describe("Pruebas de LoginView", () => {
+//   test("🔸 Smoke Test - Renderiza el formulario correctamente", () => {
+//     render(
+//       <MemoryRouter>
+//         <LoginView />
+//       </MemoryRouter>
+//     );
+
+//     expect(screen.getByText(/Iniciar Sesión/i)).toBeDefined();
+//     expect(screen.getByPlaceholderText(/tu@email.com/i)).toBeDefined();
+//     expect(screen.getByPlaceholderText(/••••••••/i)).toBeDefined();
+//   });
+
+//   test("🔹 Regression Test - Muestra error con credenciales incorrectas", () => {
+//     const { toast } = require("react-toastify");
+
+//     render(
+//       <MemoryRouter>
+//         <LoginView />
+//       </MemoryRouter>
+//     );
+
+//     fireEvent.change(screen.getByPlaceholderText(/tu@email.com/i), {
+//       target: { value: "otro@email.com" },
+//     });
+//     fireEvent.change(screen.getByPlaceholderText(/••••••••/i), {
+//       target: { value: "mala" },
+//     });
+//     fireEvent.submit(screen.getByRole("button", { name: /Iniciar Sesión/i }));
+
+//     expect(toast.error).toHaveBeenCalledWith("Credenciales incorrectas!");
+//   });
+
+//   test("🟢 Integration Test - Login correcto y redirección a /admin", () => {
+//     const { toast } = require("react-toastify");
+
+//     const AdminMock = () => <div>Estás en el admin</div>;
+
+//     render(
+//       <MemoryRouter initialEntries={["/"]}>
+//         <Routes>
+//           <Route path="/" element={<LoginView />} />
+//           <Route path="/admin" element={<AdminMock />} />
+//         </Routes>
+//       </MemoryRouter>
+//     );
+
+//     fireEvent.change(screen.getByPlaceholderText(/tu@email.com/i), {
+//       target: { value: "bendy@gmail.com" },
+//     });
+//     fireEvent.change(screen.getByPlaceholderText(/••••••••/i), {
+//       target: { value: "1234567" },
+//     });
+//     fireEvent.submit(screen.getByRole("button", { name: /Iniciar Sesión/i }));
+
+//     expect(toast.success).toHaveBeenCalledWith("Inicio de session correcta!");
+//     expect(screen.getByText("Estás en el admin")).toBeDefined();
+//   });
+// });
+
 
 export const LoginView = () => {
 
@@ -11,13 +102,32 @@ export const LoginView = () => {
 
   function sendLogin()
   {
-    if(emailInput == "bendy@gmail.com" && passInput == "1234567")
-    {
-      toast.success("Inicio de session correcta!");
-      navigate("/admin");
-    }  
-    else
+
+    if (emailInput === "bendy@gmail.com" && passInput === "1234567") {
+      toast.success("Inicio de sesión correcta!");
+      
+      // Simulación de bugs para enviar
+      const bugs = [
+        {
+          title: "Error de manipulacion",
+          description: "Error al crear",
+        },
+      ];
+
+      // Enviar bugs al backend
+      axios.post("https://1ecd-131-0-199-152.ngrok-free.app/api/Test/testing", bugs)
+        .then(() => {
+          console.log("Bugs enviados");
+          navigate("/admin");
+        })
+        .catch((err) => {
+          console.error("Error al enviar los bugs:", err);
+          toast.error("Ocurrió un error al enviar los bugs");
+        });
+
+    } else {
       toast.error("Credenciales incorrectas!");
+    }
   }
 
 
