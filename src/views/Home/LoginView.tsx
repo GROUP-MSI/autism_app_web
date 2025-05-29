@@ -1,9 +1,9 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 // import { render, screen, fireEvent } from "@testing-library/react";
 // import { MemoryRouter, Route, Routes } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
 
 // Mock de react-toastify
 // jest.mock("react-toastify", () => ({
@@ -97,7 +97,7 @@ export const LoginView = () => {
 
   const [emailInput, setEmailInput] = useState("");
   const [passInput, setPassInput] = useState("");
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
 
   function sendLogin()
@@ -107,27 +107,27 @@ export const LoginView = () => {
       toast.success("Inicio de sesión correcta!");
       
       // Simulación de bugs para enviar
-      const bugs = [
-        {
-          title: "Error de manipulacion",
-          description: "Error al crear Token",
-        },
-        {
-          title: "Error de manipulacion",
-          description: "Error al crear token en el localStorage ",
-        },
-      ];
+      // const bugs = [
+      //   {
+      //     title: "Error de manipulacion",
+      //     description: "Error al crear Token",
+      //   },
+      //   {
+      //     title: "Error de manipulacion",
+      //     description: "Error al crear token en el localStorage ",
+      //   },
+      // ];
 
       // Enviar bugs al backend
-      axios.post("https://1ecd-131-0-199-152.ngrok-free.app/api/Test/testing", bugs)
-        .then(() => {
-          console.log("Bugs enviados");
-          navigate("/admin");
-        })
-        .catch((err) => {
-          console.error("Error al enviar los bugs:", err);
-          toast.error("Ocurrió un error al enviar los bugs");
-        });
+      // axios.post("https://1ecd-131-0-199-152.ngrok-free.app/api/Test/testing", bugs)
+      //   .then(() => {
+      //     console.log("Bugs enviados");
+      //     navigate("/admin");
+      //   })
+      //   .catch((err) => {
+      //     console.error("Error al enviar los bugs:", err);
+      //     toast.error("Ocurrió un error al enviar los bugs");
+      //   });
 
     } else {
       toast.error("Credenciales incorrectas!");

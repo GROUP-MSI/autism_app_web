@@ -258,30 +258,30 @@ export const menuOptions = [
     label: "Sistema de IA",
     icon: "bi-cpu",
     subOptions: [
-      {
-        id: "ai-models",
-        label: "Modelos de IA",
-        icon: "bi-diagram-3",
-        href: "/admin/ai/models",
-      },
-      {
-        id: "ai-training",
-        label: "Entrenamiento",
-        icon: "bi-arrow-clockwise",
-        href: "/admin/ai/training",
-      },
+      // {
+      //   id: "ai-models",
+      //   label: "Modelos de IA",
+      //   icon: "bi-diagram-3",
+      //   href: "/admin/ai/models",
+      // },
+      // {
+      //   id: "ai-training",
+      //   label: "Entrenamiento",
+      //   icon: "bi-arrow-clockwise",
+      //   href: "/admin/ai/training",
+      // },
       {
         id: "ai-predictions",
         label: "Predicciones",
-        icon: "bi-crystal-ball",
+        icon: "bi-diagram-3",
         href: "/admin/ai/predictions",
       },
-      {
-        id: "ai-performance",
-        label: "Rendimiento del Sistema",
-        icon: "bi-speedometer",
-        href: "/admin/ai/performance",
-      },
+      // {
+      //   id: "ai-performance",
+      //   label: "Rendimiento del Sistema",
+      //   icon: "bi-speedometer",
+      //   href: "/admin/ai/performance",
+      // },
     ],
   },
   {
