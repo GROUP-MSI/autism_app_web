@@ -67,8 +67,8 @@ export const PredictionsView = () => {
 
         // Fetch both APIs simultaneously
         const [clusterResponse, statisticsResponse] = await Promise.all([
-          axios.get<ApiResponse>(`http://${VITE_HOST_BACKEND}/Analysis/advanced-cluster?k=3&maxIterations=100`),
-          axios.get<StatisticsData>(`http://${VITE_HOST_BACKEND}/Analysis/advanced-statistics`),
+          axios.get<ApiResponse>(`${VITE_HOST_BACKEND}/Analysis/advanced-cluster?k=3&maxIterations=100`),
+          axios.get<StatisticsData>(`${VITE_HOST_BACKEND}/Analysis/advanced-statistics`),
         ])
 
         setClusterData(clusterResponse.data.clusters)
