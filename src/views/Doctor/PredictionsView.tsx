@@ -58,6 +58,9 @@ export const PredictionsView = () => {
   const [error, setError] = useState<string | null>(null)
 
   const { VITE_HOST_BACKEND } = getEnvVariables()
+  const headers = {
+    "ngrok-skip-browser-warning": "true"
+  }
 
   useEffect(() => {
     const fetchData = async () => {
@@ -67,9 +70,10 @@ export const PredictionsView = () => {
 
         // Fetch both APIs simultaneously
         const [clusterResponse, statisticsResponse] = await Promise.all([
-          axios.get<ApiResponse>(`${VITE_HOST_BACKEND}/Analysis/advanced-cluster?k=3&maxIterations=100`),
-          axios.get<StatisticsData>(`${VITE_HOST_BACKEND}/Analysis/advanced-statistics`),
+          axios.get<ApiResponse>(`${VITE_HOST_BACKEND}/Analysis/advanced-cluster?k=3&maxIterations=100`, { headers }),
+          axios.get<StatisticsData>(`${VITE_HOST_BACKEND}/Analysis/advanced-statistics`, { headers }),
         ])
+
 
         setClusterData(clusterResponse.data.clusters)
         setStatisticsData(statisticsResponse.data)
