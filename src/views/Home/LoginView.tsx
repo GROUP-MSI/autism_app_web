@@ -1,5 +1,5 @@
 import { useState } from "react"
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 // import { render, screen, fireEvent } from "@testing-library/react";
 // import { MemoryRouter, Route, Routes } from "react-router-dom";
@@ -97,7 +97,7 @@ export const LoginView = () => {
 
   const [emailInput, setEmailInput] = useState("");
   const [passInput, setPassInput] = useState("");
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
 
   function sendLogin()
@@ -106,6 +106,7 @@ export const LoginView = () => {
     if (emailInput === "bendy@gmail.com" && passInput === "1234567") {
       toast.success("Inicio de sesión correcta!");
       
+      navigate("/admin");
       // Simulación de bugs para enviar
       // const bugs = [
       //   {
