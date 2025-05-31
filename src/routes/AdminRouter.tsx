@@ -11,6 +11,7 @@ import { NewEvaluationView } from "../views/Doctor/NewEvaluationView"
 import { ResultsAnalysisView } from "../views/Doctor/ResultsAnalisisView"
 import { TemplatesView } from "../views/Doctor/TemplatesView"
 import { PredictionsView } from "../views/Doctor/PredictionsView"
+import { TreatmentPlansView } from "../views/TraetmentPlanning/TraetmentPlansView"
 
 // import { Users, Movements, Products, Shelves, StreamArm } from '../views';
 // import { Layout } from '../components';
@@ -36,6 +37,11 @@ export const AdminRouter = () => {
           <Route path='/evaluation/templates' element={ <TemplatesView /> } />
 
           <Route path="/ai/predictions" element={ <PredictionsView /> }/>
+
+          <Route path="/treatment/plans" element={ <TreatmentPlansView /> }/>
+          <Route path="/treatment/create" element={ <TreatmentPlansView /> }/>
+          <Route path="/treatment/templates" element={ <TreatmentPlansView /> }/>
+          <Route path="/treatment/goals" element={ <TreatmentPlansView /> }/>
           
         </Routes>
       </LayoutAdmin>  

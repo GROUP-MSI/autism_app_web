@@ -1,0 +1,58 @@
+import type { TherapeuticObjective } from "../../store/slices/therapeuticObjectiveSlice";
+
+
+export const initialTherapeuticObjectivesData: TherapeuticObjective[] = [
+  {
+    id: "to-1",
+    title: "Desarrollo del Lenguaje Expresivo",
+    description: "Incrementar el vocabulario funcional y la expresión verbal espontánea",
+    category: "comunicacion",
+    priority: "alta",
+    measurable: true,
+    criteria: ["Usar 50 palabras funcionales", "Formar frases de 2-3 palabras", "Expresar necesidades verbalmente"],
+    targetAge: { min: 3, max: 6 },
+    estimatedDuration: 8,
+    prerequisites: ["Contacto visual básico", "Atención conjunta"],
+    createdAt: "2024-01-01T00:00:00Z",
+    updatedAt: "2024-01-15T10:00:00Z",
+    isActive: true,
+  },
+  {
+    id: "to-2",
+    title: "Habilidades de Juego Social",
+    description: "Desarrollar capacidades para el juego cooperativo y la interacción con pares",
+    category: "social",
+    priority: "media",
+    measurable: true,
+    criteria: [
+      "Participar en juegos grupales por 10 minutos",
+      "Compartir materiales voluntariamente",
+      "Seguir turnos en actividades",
+    ],
+    targetAge: { min: 5, max: 9 },
+    estimatedDuration: 12,
+    prerequisites: ["Atención sostenida", "Seguimiento de instrucciones"],
+    createdAt: "2024-01-05T00:00:00Z",
+    updatedAt: "2024-01-20T12:00:00Z",
+    isActive: true,
+  },
+  {
+    id: "to-3",
+    title: "Regulación Sensorial",
+    description: "Mejorar la capacidad de procesar y responder apropiadamente a estímulos sensoriales",
+    category: "sensorial",
+    priority: "alta",
+    measurable: true,
+    criteria: [
+      "Tolerar texturas variadas por 5 minutos",
+      "Mantener calma ante sonidos fuertes",
+      "Buscar input sensorial apropiado",
+    ],
+    targetAge: { min: 3, max: 8 },
+    estimatedDuration: 16,
+    prerequisites: ["Cooperación básica", "Comunicación de malestar"],
+    createdAt: "2024-01-10T00:00:00Z",
+    updatedAt: "2024-01-25T14:30:00Z",
+    isActive: true,
+  },
+]
