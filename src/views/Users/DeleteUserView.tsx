@@ -1,8 +1,8 @@
 "use client"
 
 import { useDispatch } from "react-redux"
-import { deleteUser } from "../../../store/slices/usersSlice"
-import type { User } from "../../../store/slices/usersSlice"
+import { deleteUser } from "../../store/slices/usersSlice"
+import type { User } from "../../store/slices/usersSlice"
 
 interface DeleteUserViewProps {
   user: User

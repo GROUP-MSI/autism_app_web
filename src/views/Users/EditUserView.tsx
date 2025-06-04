@@ -4,8 +4,8 @@ import type React from "react"
 
 import { useState, useEffect } from "react"
 import { useDispatch } from "react-redux"
-import { updateUser } from "../../../store/slices/usersSlice"
-import type { User } from "../../../store/slices/usersSlice"
+import { updateUser } from "../../store/slices/usersSlice"
+import type { User } from "../../store/slices/usersSlice"
 
 interface EditUserViewProps {
   user: User

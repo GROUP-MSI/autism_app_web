@@ -7,7 +7,7 @@ import { setClients, deleteClient } from "../../store/slices/clientsSlice"
 import { initialClientsData } from "../../utils/data/clients"
 import type { Client } from "../../store/slices/clientsSlice"
 
-export const ClientsView = () => {
+export const CustomerView = () => {
   const dispatch = useDispatch()
   const { clients } = useSelector((state: RootState) => state.clients)
   const [searchTerm, setSearchTerm] = useState("")

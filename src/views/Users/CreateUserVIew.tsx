@@ -4,8 +4,8 @@ import type React from "react"
 
 import { useState } from "react"
 import { useDispatch } from "react-redux"
-import { addUser } from "../../../store/slices/usersSlice";
-import type { User } from "../../../store/slices/usersSlice";
+import { addUser } from "../../store/slices/usersSlice";
+import type { User } from "../../store/slices/usersSlice";
 
 interface CreateUserViewProps {
   onClose: () => void

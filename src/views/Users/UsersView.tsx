@@ -5,9 +5,9 @@ import { useSelector, useDispatch } from "react-redux"
 import type { RootState } from "../../store/store"
 import { initialUsersData } from "../../utils/data/users";
 import { setUsers, type User } from "../../store/slices/usersSlice";
-import { CreateUserView } from "./Users/CreateUserVIew";
-import { EditUserView } from "./Users/EditUserView";
-import { DeleteUserView } from "./Users/DeleteUserView";
+import { CreateUserView } from "../Users/CreateUserVIew";
+import { EditUserView } from "../Users/EditUserView";
+import { DeleteUserView } from "../Users/DeleteUserView";
 
 export const UserView = () => {
   const dispatch = useDispatch()

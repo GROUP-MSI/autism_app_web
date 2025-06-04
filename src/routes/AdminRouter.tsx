@@ -3,14 +3,14 @@
 
 import { Route, Routes } from "react-router-dom"
 import { LayoutAdmin } from "../components/layouts/LayoutAdmin"
-import { UserView } from "../views/Admin/UsersView"
+import { UserView } from "../views/Users/UsersView"
 import { menuOptions } from "../utils"
-import { ClientsView } from "../views/Doctor/ClientView"
-import { EvaluationsListView } from "../views/Doctor/EvaluationListView"
-import { NewEvaluationView } from "../views/Doctor/NewEvaluationView"
-import { ResultsAnalysisView } from "../views/Doctor/ResultsAnalisisView"
-import { TemplatesView } from "../views/Doctor/TemplatesView"
-import { PredictionsView } from "../views/Doctor/PredictionsView"
+import { CustomerView } from "../views/Patients/CustomerView"
+import { EvaluationsListView } from "../views/Evaluations/EvaluationListView"
+import { NewEvaluationView } from "../views/Evaluations/NewEvaluationView"
+import { ResultsAnalysisView } from "../views/Evaluations/ResultsAnalisisView"
+import { TemplatesView } from "../views/Evaluations/TemplatesView"
+import { PredictionsView } from "../views/Doctors/PredictionsView"
 import { TreatmentPlansView } from "../views/TraetmentPlanning/TraetmentPlansView"
 
 // import { Users, Movements, Products, Shelves, StreamArm } from '../views';
@@ -29,7 +29,7 @@ export const AdminRouter = () => {
           {/* <Route path="/*"  element={ <RedirectorAdmin /> } /> */}
           <Route path='/*' element={ <h1>PAGINA NO ENCONTRADA</h1> } />
           <Route path='/settings/users' element={ <UserView /> } />
-          <Route path='/patients/list' element={ <ClientsView /> } />
+          <Route path='/patients/list' element={ <CustomerView /> } />
 
           <Route path='/evaluation/list' element={ <EvaluationsListView/> } />
           <Route path='/evaluation/new' element={ <NewEvaluationView /> } />
