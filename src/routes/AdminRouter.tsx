@@ -18,6 +18,7 @@ import AIAnalytics from "../views/IA/AIAnalytics"
 import CommunicationCenter from "../views/ComunicationRecommend/CommunicationCenter"
 import RegisterPatient from "../views/Patients/RegisterPatient"
 import ActivitiesLibrary from "../views/ExecActivities/ActivitiesLibrary"
+import { PredictionsView } from "../views/Doctors/PredictionsView"
 
 // import { Users, Movements, Products, Shelves, StreamArm } from '../views';
 // import { Layout } from '../components';
@@ -50,7 +51,7 @@ export const AdminRouter = () => {
 
           <Route path="/activities/library" element={ <ActivitiesLibrary /> }/>
 
-          {/* <Route path="/ai/predictions" element={ <PredictionsView /> }/> activities/library*/}
+          <Route path="/ai/models" element={ <PredictionsView /> }/>
           <Route path="/ai/predictions" element={ <AIAnalytics /> }/>
 
           <Route path="/communication/resources" element={ <CommunicationCenter /> }/>

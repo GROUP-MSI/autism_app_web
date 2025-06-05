@@ -258,12 +258,12 @@ export const menuOptions = [
     label: "Sistema de IA",
     icon: "bi-cpu",
     subOptions: [
-      // {
-      //   id: "ai-models",
-      //   label: "Modelos de IA",
-      //   icon: "bi-diagram-3",
-      //   href: "/admin/ai/models",
-      // },
+      {
+        id: "ai-models",
+        label: "Modelos de IA",
+        icon: "bi-diagram-3",
+        href: "/admin/ai/models",
+      },
       // {
       //   id: "ai-training",
       //   label: "Entrenamiento",
