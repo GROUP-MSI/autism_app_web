@@ -50,7 +50,7 @@ export const LayoutAdmin = ({ children, menuOptions }: HomeLayoutProp) => {
             sidebarOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
-          <div className="flex items-center justify-center h-16 bg-blue-900">
+          <div className="flex items-center justify-center h-16 bg-blue-900" onClick={() => navigate("/admin/dashboard")}>
             <h1 className="text-white text-xl font-bold">Dashboard</h1>
           </div>
 

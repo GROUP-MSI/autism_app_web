@@ -3,7 +3,7 @@ export const menuOptions = [
     id: "dashboard",
     label: "Dashboard",
     icon: "bi-house",
-    href: "/admin/dashboard",
+    href: "dashboard",
   },
   {
     id: "evaluation",
@@ -258,30 +258,30 @@ export const menuOptions = [
     label: "Sistema de IA",
     icon: "bi-cpu",
     subOptions: [
-      // {
-      //   id: "ai-models",
-      //   label: "Modelos de IA",
-      //   icon: "bi-diagram-3",
-      //   href: "/admin/ai/models",
-      // },
-      // {
-      //   id: "ai-training",
-      //   label: "Entrenamiento",
-      //   icon: "bi-arrow-clockwise",
-      //   href: "/admin/ai/training",
-      // },
+      {
+        id: "ai-models",
+        label: "Modelos de IA",
+        icon: "bi-diagram-3",
+        href: "/admin/ai/models",
+      },
+      {
+        id: "ai-training",
+        label: "Entrenamiento",
+        icon: "bi-arrow-clockwise",
+        href: "/admin/ai/training",
+      },
       {
         id: "ai-predictions",
         label: "Predicciones",
         icon: "bi-diagram-3",
         href: "/admin/ai/predictions",
       },
-      // {
-      //   id: "ai-performance",
-      //   label: "Rendimiento del Sistema",
-      //   icon: "bi-speedometer",
-      //   href: "/admin/ai/performance",
-      // },
+      {
+        id: "ai-performance",
+        label: "Rendimiento del Sistema",
+        icon: "bi-speedometer",
+        href: "/admin/ai/performance",
+      },
     ],
   },
   {

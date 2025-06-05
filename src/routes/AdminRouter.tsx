@@ -13,6 +13,7 @@ import { TemplatesView } from "../views/Evaluations/TemplatesView"
 import { PredictionsView } from "../views/Doctors/PredictionsView"
 import { TreatmentPlansView } from "../views/TraetmentPlanning/TraetmentPlansView"
 import { NotFound } from "../views/Home/NotFound"
+import Dashboard from "../views/Admin/Dashboard"
 
 // import { Users, Movements, Products, Shelves, StreamArm } from '../views';
 // import { Layout } from '../components';
@@ -30,6 +31,7 @@ export const AdminRouter = () => {
           {/* <Route path="/*"  element={ <RedirectorAdmin /> } /> */}
           <Route path='/*' element={ <NotFound/> } />
 
+          <Route path='/dashboard' element={ <Dashboard /> } />
           <Route path='/settings/users' element={ <UserView /> } />
           <Route path='/patients/list' element={ <CustomerView /> } />
 
@@ -39,9 +41,6 @@ export const AdminRouter = () => {
           <Route path='/evaluation/templates' element={ <TemplatesView /> } />
 
           <Route path="/treatment/plans" element={ <TreatmentPlansView /> }/>
-          <Route path="/treatment/create" element={ <TreatmentPlansView /> }/>
-          <Route path="/treatment/templates" element={ <TreatmentPlansView /> }/>
-          <Route path="/treatment/goals" element={ <TreatmentPlansView /> }/>
 
           <Route path="/ai/predictions" element={ <PredictionsView /> }/>
           
