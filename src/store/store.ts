@@ -6,6 +6,8 @@ import activitiesReducer from "./slices/activitiesSlice"
 import treatmentPlanReducer from "./slices/treatmentPlanSlice";
 import aiSystemReducer from "./slices/iaSystemSlice";
 import communicationReducer from "./slices/communicationSlice"
+import patientReducer from './slices/patientSlice';
+import activitiessReducer from './slices/activitiessSlice';
 
 export const store = configureStore({
   reducer: {
@@ -15,7 +17,9 @@ export const store = configureStore({
     activities: activitiesReducer,
     treatmentPlans: treatmentPlanReducer,
     aiSystem: aiSystemReducer,
-    communication: communicationReducer
+    communication: communicationReducer,
+    patients: patientReducer,
+    activitiess: activitiessReducer
   }
 })
 
