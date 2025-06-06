@@ -53,6 +53,7 @@ export const AdminRouter = () => {
 
           <Route path="/ai/models" element={ <PredictionsView /> }/>
           <Route path="/ai/predictions" element={ <AIAnalytics /> }/>
+          
 
           <Route path="/communication/resources" element={ <CommunicationCenter /> }/>
           
