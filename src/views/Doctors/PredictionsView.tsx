@@ -103,9 +103,9 @@ const simulatedPatientData = [
 ]
 
 export const PredictionsView = () => {
-  const [patientData, setPatientData] = useState(simulatedPatientData)
+  const patientData = simulatedPatientData;
   const [loading, setLoading] = useState(true)
-  setPatientData(simulatedPatientData);
+  // setPatientData(simulatedPatientData);
   useEffect(() => {
     // Simular carga de datos
     const timer = setTimeout(() => {

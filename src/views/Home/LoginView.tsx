@@ -106,7 +106,7 @@ export const LoginView = () => {
     if (emailInput === "bendy@gmail.com" && passInput === "1234567") {
       toast.success("Inicio de sesión correcta!");
       
-      navigate("/admin");
+      navigate("/admin/settings/users");
       // Simulación de bugs para enviar
       // const bugs = [
       //   {
