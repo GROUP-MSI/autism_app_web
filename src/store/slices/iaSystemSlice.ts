@@ -3,11 +3,12 @@ import { createSlice, type PayloadAction } from "@reduxjs/toolkit"
 export interface AIModel {
   id: string
   name: string
-  type: "classification" | "regression" | "clustering" | "recommendation"
+  type: string // Cambiado para permitir más tipos específicos como "Aprendizaje Supervisado"
   status: "training" | "ready" | "error"
   accuracy: number
   lastTrained: string
   description: string
+  parameters?: Record<string, any> // Añadido para almacenar parámetros del modelo
 }
 
 export interface Prediction {
@@ -23,12 +24,24 @@ export interface Prediction {
 export interface ClusterAnalysis {
   id: string
   name: string
+  algorithm?: string // Añadido para especificar el algoritmo usado
+  parameters?: Record<string, any> // Añadido para almacenar parámetros del análisis
+  metrics?: {
+    // Añadido para almacenar métricas de rendimiento
+    silhouetteScore?: number
+    inertia?: number
+    accuracy?: number
+    precision?: number
+    recall?: number
+    f1Score?: number
+  }
   clusters: {
     id: string
     name: string
     characteristics: string[]
     patientCount: number
     avgProgress: number
+    confidence?: number // Añadido para almacenar confianza de la clasificación
   }[]
   createdAt: string
 }
