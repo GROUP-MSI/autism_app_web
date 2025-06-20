@@ -228,7 +228,7 @@ export const menuOptions = [
     icon: "bi-people",
     subOptions: [
       {
-        id: "patients-list",
+        id: "patients-klist",
         label: "Lista de Pacientes",
         icon: "bi-list-ul",
         href: "/admin/patients/list",
@@ -255,12 +255,12 @@ export const menuOptions = [
   },
   {
     id: "ai-system",
-    label: "Sistema de IA",
+    label: "Resultados de diagnosticos",
     icon: "bi-cpu",
     subOptions: [
       {
         id: "ai-models",
-        label: "Modelos de IA",
+        label: "Modelos de clasificacion",
         icon: "bi-diagram-3",
         href: "/admin/ai/models",
       },
