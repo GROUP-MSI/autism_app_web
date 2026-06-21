@@ -3,7 +3,7 @@ export const menuOptions = [
     id: "dashboard",
     label: "Dashboard",
     icon: "bi-house",
-    href: "dashboard",
+    href: "/admin/dashboard",
   },
   {
     id: "evaluation",
@@ -314,5 +314,115 @@ export const menuOptions = [
       //   href: "/admin/settings/backup",
       // },
     ],
+  },
+]
+
+export const doctorMenuOptions = [
+  {
+    id: "dashboard",
+    label: "Dashboard",
+    icon: "bi-house",
+    href: "/doctor/dashboard",
+  },
+  {
+    id: "patients",
+    label: "Mis Pacientes",
+    icon: "bi-people",
+    subOptions: [
+      { 
+        id: "list-patients",
+        label: "Lista de Pacientes", 
+        icon: "bi-people",
+        href: "/doctor/patients/list" 
+      },
+      { 
+        id: "register-patient",
+        icon: "bi-people",
+        label: "Registrar Paciente", 
+        href: "/doctor/patients/register" 
+      },
+    ],
+  },
+  {
+    id: "evaluations",
+    label: "Evaluaciones",
+    icon: "bi-clipboard-data",
+    subOptions: [
+      { 
+        id: "my-evaluations",
+        label: "Mis Evaluaciones",
+        icon: "bi-clipboard-data", 
+        href: "/doctor/evaluations/list" 
+      },
+      { 
+        id: "new-evaluation",
+        label: "Nueva Evaluación", 
+        icon: "bi-clipboard-data",
+        href: "/doctor/evaluations/new" 
+      },
+    ],
+  },
+  {
+    id: "treatment",
+    label: "Tratamientos",
+    icon: "bi-heart-pulse",
+    href: "/doctor/treatment/plans",
+  },
+  {
+    id: "progress",
+    label: "Seguimiento",
+    icon: "bi-graph-up",
+    href: "/doctor/progress/tracking",
+  },
+  {
+    id: "activities",
+    label: "Actividades",
+    icon: "bi-puzzle",
+    href: "/doctor/activities/assign",
+  },
+  {
+    id: "communication",
+    label: "Mensajes",
+    icon: "bi-chat-dots",
+    href: "/doctor/communication/messages",
+  },
+]
+
+export const patientMenuOptions = [
+  {
+    id: "dashboard",
+    label: "Inicio",
+    icon: "bi-house",
+    href: "/patient/dashboard",
+  },
+  {
+    id: "activities",
+    label: "Mis Actividades",
+    icon: "bi-puzzle",
+    href: "/patient/activities/assigned",
+  },
+  {
+    id: "progress",
+    label: "Mi Progreso",
+    icon: "bi-graph-up",
+    href: "/patient/progress/view",
+  },
+  {
+    id: "treatment",
+    label: "Mi Tratamiento",
+    icon: "bi-heart-pulse",
+    href: "/patient/treatment/view",
+  },
+  {
+    id: "resources",
+    label: "Recursos",
+    icon: "bi-book",
+    href: "/patient/resources/library",
+  },
+  {
+    id: "communication",
+    label: "Mensajes",
+    icon: "bi-chat-dots",
+    href: "/patient/communication/messages",
   },
 ]

@@ -106,31 +106,18 @@ export const LoginView = () => {
     if (emailInput === "bendy@gmail.com" && passInput === "1234567") {
       toast.success("Inicio de sesión correcta!");
       
-      navigate("/admin/settings/users");
-      // Simulación de bugs para enviar
-      // const bugs = [
-      //   {
-      //     title: "Error de manipulacion",
-      //     description: "Error al crear Token",
-      //   },
-      //   {
-      //     title: "Error de manipulacion",
-      //     description: "Error al crear token en el localStorage ",
-      //   },
-      // ];
+      navigate("/admin/dashboard");
 
-      // Enviar bugs al backend
-      // axios.post("https://1ecd-131-0-199-152.ngrok-free.app/api/Test/testing", bugs)
-      //   .then(() => {
-      //     console.log("Bugs enviados");
-      //     navigate("/admin");
-      //   })
-      //   .catch((err) => {
-      //     console.error("Error al enviar los bugs:", err);
-      //     toast.error("Ocurrió un error al enviar los bugs");
-      //   });
-
-    } else {
+    } 
+    else if(emailInput === "doctor.bendy@gmail.com" && passInput === "1234567")
+    {
+      navigate("/doctor/dashboard");
+    }
+    else if(emailInput === "patient.bendy@gmail.com" && passInput === "1234567")
+    {
+      navigate("/patient/dashboard");
+    }
+    else {
       toast.error("Credenciales incorrectas!");
     }
   }

@@ -5,6 +5,8 @@ import { HomeRouter } from './routes/HomeRouter'
 import { RedirectorHome } from './components/redirector/RedirectorHome'
 // import { PrivateAdminRoute } from './components/redirector/PrivateRoute'
 import { AdminRouter } from './routes/AdminRouter'
+import { DoctorRouter } from './routes/DoctorRouter'
+import { PatientRouter } from './routes/PatientRouter'
 
 function App() {
 
@@ -12,9 +14,9 @@ function App() {
     <>
       <Routes>
         <Route path="/home/*" element={ <HomeRouter /> } />
-        {/* <Route path="/customer/*" element={ <PrivateCustomerRoute element={<CustomerRouter/>} /> } />
-        <Route path="/worker/*" element={ <PrivateWorkerRoute element={<WorkerRouter/>} /> } /> */}
         {/* <Route path="/admin/*" element={ <PrivateAdminRoute element={<AdminRouter/>} /> } /> */}
+        <Route path="/doctor/*" element={<DoctorRouter/>} />
+        <Route path="/patient/*" element={<PatientRouter/>} />
         <Route path="/admin/*" element={<AdminRouter/>} />
         <Route path="*" element={ <RedirectorHome /> } />
       </Routes>

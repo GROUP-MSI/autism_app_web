@@ -33,6 +33,10 @@ export const LayoutAdmin = ({ children, menuOptions }: HomeLayoutProp) => {
     } else {
       setActiveOption(option.id)
       setSidebarOpen(false) // Close mobile sidebar when option is selected
+
+      if (option.href) {
+        navigate(option.href)
+      }
     }
   }
 
