@@ -3,14 +3,17 @@ import usersReducer from "./slices/usersSlice"
 import clientsReducer from "./slices/clientsSlice"
 import evaluationsReducer from "./slices/evaluationSlice"
 import activitiesReducer from "./slices/activitiesSlice"
-import treatmentPlanReducer from "./slices/treatmentPlanSlice";
-import aiSystemReducer from "./slices/iaSystemSlice";
+import treatmentPlanReducer from "./slices/treatmentPlanSlice"
+import aiSystemReducer from "./slices/iaSystemSlice"
 import communicationReducer from "./slices/communicationSlice"
-import patientReducer from './slices/patientSlice';
-import activitiessReducer from './slices/activitiessSlice';
+import patientReducer from './slices/patientSlice'
+import activitiessReducer from './slices/activitiessSlice'
+import notificationsReducer from './slices/notificationsSlice'
+import userReducer from "./slices/userSlice"
 
 export const store = configureStore({
   reducer: {
+    user: userReducer,
     users: usersReducer,
     clients: clientsReducer,
     evaluations: evaluationsReducer,
@@ -19,8 +22,9 @@ export const store = configureStore({
     aiSystem: aiSystemReducer,
     communication: communicationReducer,
     patients: patientReducer,
-    activitiess: activitiessReducer
-  }
+    activitiess: activitiessReducer,
+    notifications: notificationsReducer,
+  },
 })
 
 export type RootState = ReturnType<typeof store.getState>
